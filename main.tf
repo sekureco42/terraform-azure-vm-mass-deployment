@@ -26,7 +26,7 @@ resource "azurerm_resource_group" "rg" {
 
 # Locate the existing custom/golden image
 data "azurerm_image" "search" {
-  name                = "win10-flare"
+  name                = var.vm_image_name
   resource_group_name = "rg_irc-excercise-prep"
 }
 
